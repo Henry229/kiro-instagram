@@ -28,9 +28,14 @@ npx prisma db seed       # 개발용 데이터 시딩
 
 ### 코드 품질
 ```bash
-npm run lint             # ESLint 실행
+npm run lint             # ESLint 실행 (typescript-eslint 사용)
 npm run type-check       # TypeScript 타입 체크 (빌드 없이)
 ```
+
+**Git Hooks (Husky + lint-staged)**:
+- `husky`와 `lint-staged`가 설정되어 있어 commit 시 자동으로 lint와 type-check 실행
+- commit 전 자동으로 `eslint --fix`로 자동 수정 가능한 문제 해결
+- TypeScript 타입 에러가 있으면 commit 차단
 
 ### 테스팅
 현재 package.json에 테스트 스크립트가 설정되어 있지 않습니다. Test Sprite MCP를 사용한 property-based 테스팅이 계획되어 있습니다.

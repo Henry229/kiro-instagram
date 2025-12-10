@@ -1,11 +1,31 @@
-import nextPlugin from 'eslint-config-next';
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
-const eslintConfig = [
+export default [
   {
-    ignores: ['.next/**', 'node_modules/**'],
+    ignores: [
+      '.next/**',
+      'node_modules/**',
+      'out/**',
+      '.cache/**',
+      'dist/**',
+      'build/**',
+    ],
   },
-  ...nextPlugin,
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
+  },
 ];
-
-export default eslintConfig;
 
