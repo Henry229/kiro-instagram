@@ -5,7 +5,7 @@
   - Install and configure Prisma with SQLite
   - Set up shadcn/ui components and Tailwind CSS
   - Configure NextAuth.js for authentication
-  - Set up Vitest for testing
+  - Set up browser testing and TestSprite MCP for testing
   - _Requirements: All requirements depend on proper project setup_
 
 
