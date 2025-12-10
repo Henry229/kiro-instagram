@@ -166,3 +166,12 @@ Test Sprite MCP를 사용한 26개의 correctness properties 구현 예정:
 `.env.example` 참고하여 `.env.local` 생성:
 - `DATABASE_URL` - SQLite 데이터베이스 경로
 - NextAuth.js 관련 변수 (NEXTAUTH_SECRET, NEXTAUTH_URL 등)
+
+## Git Workflow
+
+작업 완료 후:
+1. `npm run lint` - 수동으로 먼저 확인 (선택사항)
+2. `npm run type-check` - 수동으로 먼저 확인 (선택사항)
+3. `git add .` - 변경사항 스테이징
+4. `git commit -m "message"` - **이 시점에서 자동으로 lint와 type-check 실행**
+5. 모든 검사 통과 시 commit 완료, 실패 시 commit 차단
