@@ -9,8 +9,9 @@ A simple Instagram clone built with Next.js 16, Prisma, and NextAuth.
 - **Styling**: Tailwind CSS
 - **Database**: SQLite with Prisma ORM
 - **Authentication**: NextAuth.js v5
-- **Testing**: Vitest with React Testing Library
+- **Testing**: Browser testing and TestSprite MCP
 - **UI Components**: shadcn/ui (to be configured)
+
 
 ## Getting Started
 
@@ -57,11 +58,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 - `npm run type-check` - Run TypeScript type checking
-- `npm test` - Run tests with Vitest
-- `npm run test:ui` - Run tests with Vitest UI
 - `npm run prisma:generate` - Generate Prisma Client
 - `npm run prisma:migrate` - Run database migrations
 - `npm run prisma:studio` - Open Prisma Studio
+
 
 ## Project Structure
 
